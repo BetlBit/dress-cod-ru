@@ -2,3 +2,7 @@ extends layout
 
 block body
       h2 Это - контент главной страницы
+      ul 
+            each pr in products 
+                  li
+                        each #{key}: #{el},&#032;
