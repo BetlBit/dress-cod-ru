@@ -1,15 +1,73 @@
 body
-    display flex
-    justify-content center
-    align-items center
     margin 0
     min-height 100vh
-    flex-direction column
+    background-color rgb(56, 56, 56)
+    color #fff
+    font-family: 'Chakra Petch', sans-serif;
 h2
-    color red
+    color gold
+    text-align center
+    font-size 30px
 
 &>h1
-    color blue
+    color rgb(156, 88, 206)
     text-align center
-&:hover
-    background-color #eee
+
+.box
+    max-width 1000px
+    margin auto
+
+.items
+    display flex
+    flex-wrap wrap
+
+.item
+    width calc(100% / 3 - 20px)
+    font-size 15px
+    margin 10px
+    text-align center
+    margin-bottom 32px
+
+.img
+    max-width 100%
+    border-radius 8px
+    cursor pointer
+    transition 0.3s
+    &:hover
+        opacity 0.8
+        
+
+.cat
+    opacity 0.7
+
+.name 
+    margin-top 24px
+    margin-bottom: 12px
+    min-height 2em
+
+.brand
+    margin 10px 0
+    opacity 0.7
+    margin-top 0
+
+.price
+    font-size 18px
+
+.buy
+    -webkit-appearance none
+    appearance none
+    background-color #ddd
+    width 100px
+    display block
+    margin auto
+    border-radius: 8px
+    margin-top 8px
+    padding-top 4px
+    padding-bottom 4px
+    font-family: 'Chakra Petch', sans-serif;
+    font-size 13px
+    cursor pointer
+    transition 0.3s
+    &:hover
+        opacity 0.8
+        

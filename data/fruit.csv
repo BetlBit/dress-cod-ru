@@ -1,7 +1,5 @@
-name;s;c
-Футболка;L;Black
-Брюки;S;Gray
-Куртка;XL;White
-Шапка;Oversize;Black
-Носки;Oversize;White
-Ботинки;46;Gray
+name;s;c;cat;img;price;brand
+Basic Big Script Logo Crew Neck Comfort Fit;S,M,L;Black;T-SHIRT;basic_big_script_logo_crew_neck_comfort_fit.jpg;3490;Champion Reverse Weave
+Garment Dyed & Acid Wash Straight Hem;S,M,L;Crimson;TROUSERS;garment_dyed_&_acid_wash_straight_hem.jpg;6490;Champion Reverse Weave 
+Halden CS Santo Domingo Denim 11.20 Oz;S,M,L;blue;JACKET;halden_cs_santo_domingo_denim_11.20_oz.jpg;11190;Edwin 
+Undercover NRG UBA;S,M,L;red;SHORT;undercover_nrg_uba.jpg;9190;Nike 

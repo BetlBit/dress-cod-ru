@@ -1,8 +1,14 @@
 extends layout
 
 block body
-      h2 Это - контент главной страницы
-      ul 
-            each pr in products 
-                  li
-                        each #{key}: #{el},&#032;
+      div.box
+            h2= title
+            div.items
+                  each pr in products 
+                        div.item
+                              img(class='img', src='image/'+pr.image)
+                              div.name #{pr.name} 
+                              div.cat #{pr.category}
+                              div.brand #{pr.brand}
+                              div.price #{pr.price} ₽     
+                              button.buy Купить                         

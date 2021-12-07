@@ -10,7 +10,7 @@ app.use(stylus.middleware({
     dest: "./public"
 }));
 
-app.set("views", ".server/views");
+app.set("views", "./server/views");
 app.set("view engine", "pug");
 
 app.use(express.static("./public"));
