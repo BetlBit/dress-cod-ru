@@ -1,0 +1,38 @@
+extends layout
+
+block body
+    div.box
+        h2= title 
+        form#addProduct(method="POST")
+            span Название товара 
+            input(type="text" name="name" placeholder="Название товара")
+            br
+            span Брэнд 
+            input(type="text" name="brand" placeholder="Брэнд")
+
+            br
+            span категория 
+            select(name="category")
+                option(value="SHORT") Шорты
+                option(value="T-SHIRT") Футболки
+                option(value="TROUSERS") Штаны
+                option(value="JACKET") Куртки
+            br
+            span Размер 
+            select(name="size")
+                option(value="S") S
+                option(value="M") M
+                option(value="L") L
+            br
+            span Цвет 
+            select(name="color")
+                option(value="red") красный
+                option(value="blue") синий
+                option(value="Crimsom") малиновый
+                option(value="black") чёрный
+            br
+            span добавить изображение:  
+            input(type="file", name="добавить изображение")
+            br
+            button(type="submit") Добавить
+        script(src="/js/addProduct.js")

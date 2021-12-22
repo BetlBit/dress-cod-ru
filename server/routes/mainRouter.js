@@ -37,6 +37,7 @@ const makeProducts = () => {
       };
     });
 };
+console.log(makeProducts())
 
 router.get("/", (req, res) => {
   res.render("index", {
@@ -46,4 +47,17 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/adddre", (req, res) => {
+  res.render("adddre", {
+      title: "Добавить товар"
+  });
+});
+router.get("/busket", (req, res) => {
+  res.render("busket", {
+      title: "Корзина"
+  });
+});
+
+
 module.exports = router;
+
