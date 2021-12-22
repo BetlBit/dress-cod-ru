@@ -1,9 +1,17 @@
 body
     margin 0
     min-height 100vh
-    background-color rgb(56, 56, 56)
-    color #fff
+    background url(/image/bg.jpg)
+    background-position center center
+    background-repeat no-repeat
+    background-size cover
+    backdrop-filter blur(15px)
+    color #1f0e11
     font-family: 'Chakra Petch', sans-serif;
+h1
+    color gold
+    text-align center
+    font-size 30px
 h2
     color gold
     text-align center
@@ -18,8 +26,10 @@ h2
     margin auto
 
 .items
+    background-color #f2e3ce
     display flex
     flex-wrap wrap
+    border-radius 5px
 
 .item
     width calc(100% / 3 - 20px)
