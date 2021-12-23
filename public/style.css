@@ -28,7 +28,7 @@ h1 {
   margin: auto;
 }
 .items {
-  background-color: #f2e3ce;
+  background-color: #fcf6f0;
   display: flex;
   flex-wrap: wrap;
   border-radius: 5px;
@@ -83,4 +83,18 @@ h1 {
 }
 .buy:hover {
   opacity: 0.8;
+}
+#cart_content {
+  background-color: #fcf6f0;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+.btn {
+  display: inline-block;
+  background: #8c959d;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  border-radius: 3px;
 }

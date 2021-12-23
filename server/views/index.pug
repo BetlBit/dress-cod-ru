@@ -3,7 +3,7 @@ extends layout
 block body
       div.box
       
-            button.basket Корзина    
+            a(class='btn' href='/busket') корзина          
             h2= title
             div.items
                   each pr in products 
@@ -13,4 +13,10 @@ block body
                               div.cat #{pr.category}
                               div.brand #{pr.brand}
                               div.price #{pr.price} ₽     
-                              button.buy Купить                         
+                              button.buy(data-id= + pr.id) Купить 
+            button#checkout Оформить заказ
+            button#clear_cart Очистить корзину
+
+
+            div#cart_content     
+      script(src="/busket.js")                   
