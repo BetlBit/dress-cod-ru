@@ -25,7 +25,7 @@ const makeProducts = () => {
     .split("\r\n")
     .slice(1)
     .map((row) => {
-      const [name, size, color, category, image, price, brand] = row.split(";");
+      const [name, size, color, category, image, price, brand, id] = row.split(";");
       return {
         name,
         size,
@@ -33,7 +33,8 @@ const makeProducts = () => {
         category,
         image,
         price,
-        brand
+        brand,
+        id
       };
     });
 };
