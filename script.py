@@ -4,7 +4,14 @@ names = [
     'Basic Big Script Logo Crew Neck Comfort Fit',
     'Halden CS Santo Domingo Denim 11.20 Oz',
     'Casablanca XC-72',
-    'Undercover NRG UBA'
+    'Undercover NRG UBA',
+    'LS Adicolor Classics 3-Stripes',
+    'Printed Platte Sherpa 1/4 Zip',
+    'Fit Polo Bear Corduroy',
+    'Black Light Tie-Dye',
+    'All Over Polo Pony Jogger',
+    'Polo Bear Blazer And Corduroy Pants',
+    'Classic Fit Polo Bear Corduroy'
 ]
 
 data = []

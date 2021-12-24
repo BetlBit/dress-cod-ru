@@ -1,19 +1,26 @@
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body
     margin 0
-    min-height 100vh
     background url(/image/bg.jpg)
     background-position center center
-    background-repeat no-repeat
+    // background-repeat no-repeat
     background-size cover
     backdrop-filter blur(15px)
-    color #1f0e11
+    color #000
     font-family: 'Chakra Petch', sans-serif;
 h1
-    color gold
+    color #5d02ff
     text-align center
     font-size 30px
 h2
-    color gold
+    color #5d02ff
     text-align center
     font-size 30px
 
@@ -26,10 +33,26 @@ h2
     margin auto
 
 .items
+<<<<<<< Updated upstream
     background-color #fcf6f0
+=======
+    background-color #fff
+>>>>>>> Stashed changes
     display flex
     flex-wrap wrap
-    border-radius 5px
+    position: relative;
+    border-radius: 10px;
+    &::before
+        content: '';
+        position: absolute;
+        top: 0px;
+        right: 15px;
+        bottom: 0px;
+        left: 15px;
+        background: linear-gradient(315deg,#e91e63,#5d02ff);
+        z-index: -1;
+        transform: skew(2deg,1deg);
+        border-radius: 10px;
 
 .item
     width calc(100% / 3 - 20px)
@@ -62,22 +85,37 @@ h2
 
 .price
     font-size 18px
+    margin-bottom 12px
 
-.buy
-    -webkit-appearance none
-    appearance none
-    background-color #ddd
-    width 100px
-    display block
-    margin auto
-    border-radius: 8px
-    margin-top 8px
-    padding-top 4px
-    padding-bottom 4px
-    font-family: 'Chakra Petch', sans-serif;
-    font-size 13px
-    cursor pointer
+// .buy
+//     -webkit-appearance none
+//     appearance none
+//     background-color #ddd
+//     width 100px
+//     display block
+//     margin auto
+//     border-radius: 8px
+//     margin-top 8px
+//     padding-top 4px
+//     padding-bottom 4px
+//     font-family: 'Chakra Petch', sans-serif;
+//     font-size 13px
+//     cursor pointer
+//     transition 0.3s
+//     &:hover
+//         opacity 0.8
+
+.buy {
+    font-size: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #5d02ff;
+    border: #5d02ff 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
     transition 0.3s
+<<<<<<< Updated upstream
     &:hover
         opacity 0.8
 
@@ -95,3 +133,114 @@ h2
     text-decoration none
     border-radius 3px
 
+=======
+    // text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 #5d02ff, 0 0 0.5em 0 #5d02ff;
+    position: relative;
+}
+
+.buy::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: #5d02ff;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1.5em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+    transition 0.3s
+}
+
+.buy::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em #5d02ff;
+    opacity: 0;
+    background-color: #5d02ff;
+    z-index: -1;
+    transition: opacity 100ms linear;
+}
+
+.buy:hover,
+.buy:focus {
+    color: #5d02ff;
+    text-shadow: none;
+}
+
+.buy:hover::before,
+.buy:focus::before {
+    opacity: 1;
+}
+.buy:hover::after,
+.buy:focus::after {
+    opacity: 1;
+}
+
+.basket {
+    font-size: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    border: #5d02ff 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    transition 0.3s
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    // box-shadow: inset 0 0 0.5em 0 #5d02ff, 0 0 0.5em 0 #5d02ff;
+    position: absolute;
+    left 71%
+}
+
+// .basket::before {
+//     pointer-events: none;
+//     content: "";
+//     position: absolute;
+//     background: #5d02ff;
+//     top: 120%;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     transform: perspective(1.5em) rotateX(40deg) scale(1, 0.35);
+//     filter: blur(1em);
+//     opacity: 0.7;
+//     transition 0.3s
+// }
+
+.basket::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // box-shadow: 0 0 2em 0.5em #5d02ff;
+    opacity: 0;
+    // background-color: #5d02ff;
+    z-index: -1;
+    transition: opacity 100ms linear;
+}
+
+.basket:hover,
+.basket:focus {
+    color: #5d02ff;
+    text-shadow: none;
+}
+
+.basket:hover::before,
+.basket:focus::before {
+    opacity: 1;
+}
+.basket:hover::after,
+.basket:focus::after {
+    opacity: 1;
+}
+        
+>>>>>>> Stashed changes
