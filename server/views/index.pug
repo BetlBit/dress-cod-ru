@@ -3,11 +3,8 @@ extends layout
 block body
       div.box
       
-<<<<<<< Updated upstream
             a(class='btn' href='/busket') корзина          
-=======
             a.basket Корзина    
->>>>>>> Stashed changes
             h2= title
             div.items
                   each pr in products 
@@ -17,7 +14,6 @@ block body
                               div.cat #{pr.category}
                               div.brand #{pr.brand}
                               div.price #{pr.price} ₽     
-<<<<<<< Updated upstream
                               button.buy(data-id= + pr.id) Купить 
             button#checkout Оформить заказ
             button#clear_cart Очистить корзину
@@ -25,6 +21,4 @@ block body
 
             div#cart_content     
       script(src="/busket.js")                   
-=======
                               a.buy Купить                         
->>>>>>> Stashed changes
