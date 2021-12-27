@@ -1,10 +1,7 @@
 extends layout
 
 block body
-      div.box
-      
-            //- a(class='btn' href='../busket') корзина          
-            //- a.basket(href="../public/busket") Корзина    
+     div.box
             h2= title
             .wrapper-header
                   header.header
@@ -14,11 +11,8 @@ block body
                               a.topnav-link(href='#about') &Ocy; &ncy;&acy;&scy;
                               a.topnav-link(href='#galary') &Gcy;&acy;&lcy;&iecy;&rcy;&iecy;&yacy;
                               a.topnav-link(href='') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
-                        a.header-phone(href='tel:+7 (977) 282-45-23') +7 (800) 555-555-35
-            
-            .sidebar.close
-                  
-                        
+                        a.header-phone(href='tel:+7 (977) 282-45-23') +7 (800) 555-555-35           
+            .sidebar.close                                          
                   ul.nav-links                                   
                         li
                               .iocn-link
@@ -44,19 +38,13 @@ block body
                                           a(href='#shirts.pug') SHIRTS
                                     li
                                           a(href='#hoodies.pug') HOODIES
-            div.items
-                  each pr in products 
-                        div.item
-                              img(class='img', src='image/'+pr.image)
-                              div.name #{pr.name} 
-                              div.cat #{pr.category}
-                              div.brand #{pr.brand}
-                              div.price #{pr.price} ₽     
-                              button.buy(data-id= + pr.id) Купить 
-            //- button#checkout Оформить заказ
-            //- button#clear_cart Очистить корзину
-
-
-            //- div#cart_content     
-      //- script(src="/busket.js")                   
-      //-                         a.buy Купить                         
+            div.products
+                each pr in products
+                    div.product
+                        img(class='img-product', src='image/'+pr.image)
+                        div.name-pr #{pr.name}
+                        div.name-pr #{pr.name} 
+                        div.cat-pr #{pr.category}
+                        div.brand-pr #{pr.brand}
+                        div.price-pr #{pr.price} ₽     
+                        div.buy-pr(data-id= + pr.id) Купить                          

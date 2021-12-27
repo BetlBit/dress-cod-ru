@@ -48,7 +48,7 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/adddre", (req, res) => {
+router.get("/", (req, res) => {
   res.render("adddre", {
       title: "Добавить товар"
   });
@@ -58,6 +58,11 @@ router.get("/busket", (req, res) => {
       title: "Корзина"
   });
 });
+// router.get("/", (req, res) => {
+//   res.render("t-thirt", {
+//       title: "Футболки"
+//   });
+// });
 
 
 module.exports = router;
