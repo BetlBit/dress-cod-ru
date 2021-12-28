@@ -11,7 +11,8 @@ names = [
     'Black Light Tie-Dye',
     'All Over Polo Pony Jogger',
     'Polo Bear Blazer And Corduroy Pants',
-    'Classic Fit Polo Bear Corduroy'
+    'Classic Fit Polo Bear Corduroy',
+    'Polo Ralph Lauren '
 ]
 
 data = []
