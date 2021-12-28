@@ -25,26 +25,25 @@ block body
                                     li
                                           a.link_name(href='#') Category
                                     li
-                                           a(href='#t-shirt.pug') T-SHIRTS
+                                           a(href='t-shirt') T-SHIRTS
                                     li
-                                          a(href='#trousers.pug') TROUSERS
+                                          a(href='trousers') TROUSERS
                                     li
-                                          a(href='#jacket.pug') JACKETS
+                                          a(href='jacket') JACKETS
                                     li
-                                          a(href='#shorts.pug') SHORTS
+                                          a(href='short') SHORTS
                                     li
-                                          a(href='#sweaters.pug') SWEATERS
+                                          a(href='sweaters') SWEATERS
                                     li
-                                          a(href='#shirts.pug') SHIRTS
+                                          a(href='shirts') SHIRTS
                                     li
-                                          a(href='#hoodies.pug') HOODIES
-            div.products
-                each pr in products
-                    div.product
-                        img(class='img-product', src='image/'+pr.image)
-                        div.name-pr #{pr.name}
-                        div.name-pr #{pr.name} 
-                        div.cat-pr #{pr.category}
-                        div.brand-pr #{pr.brand}
-                        div.price-pr #{pr.price} ₽     
-                        div.buy-pr(data-id= + pr.id) Купить                          
+                                          a(href='hoodies') HOODIES
+            div.items                                    
+                  each pr in products
+                        div.item
+                              img(class='img', src='image/'+pr.image)
+                              div.name-pr #{pr.name}
+                              div.cat-pr #{pr.category}
+                              div.brand-pr #{pr.brand}
+                              div.price-pr #{pr.price} ₽     
+                              div.buy-pr(data-id= + pr.id) Купить                          

@@ -1,0 +1,49 @@
+extends layout
+
+block body
+     div.box
+            h2= title
+            .wrapper-header
+                  header.header
+                        .wrapper-logo
+                              .logo
+                        nav.topnav
+                              a.topnav-link(href='#about') &Ocy; &ncy;&acy;&scy;
+                              a.topnav-link(href='#galary') &Gcy;&acy;&lcy;&iecy;&rcy;&iecy;&yacy;
+                              a.topnav-link(href='') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+                        a.header-phone(href='tel:+7 (977) 282-45-23') +7 (800) 555-555-35           
+            .sidebar.close                                          
+                  ul.nav-links                                   
+                        li
+                              .iocn-link
+                                    a(class="sidebar-logo", href="#")
+                                          i.bx.bx-collection
+                                                img(class="sidebar-logo", src="image/menu.png", alt="")
+                                          span.link_name Category
+                                    i.bx.bxs-chevron-down.arrow
+                              ul.sub-menu
+                                    li
+                                          a.link_name(href='#') Category
+                                    li
+                                           a(href='t-shirt') T-SHIRTS
+                                    li
+                                          a(href='trousers') TROUSERS
+                                    li
+                                          a(href='jacket') JACKETS
+                                    li
+                                          a(href='shorts') SHORTS
+                                    li
+                                          a(href='sweaters') SWEATERS
+                                    li
+                                          a(href='shirts') SHIRTS
+                                    li
+                                          a(href='hoodies') HOODIES
+            div.items                                    
+                  each pr in products
+                        div.item
+                              img(class='img', src='image/'+pr.image)
+                              div.name-pr #{pr.name}
+                              div.cat-pr #{pr.category}
+                              div.brand-pr #{pr.brand}
+                              div.price-pr #{pr.price} ₽     
+                              div.buy-pr(data-id= + pr.id) Купить                          

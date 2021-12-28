@@ -40,6 +40,7 @@ const makeProducts = () => {
 };
 console.log(makeProducts())
 
+
 router.get("/", (req, res) => {
   res.render("index", {
     title: "DRESS-COD",
@@ -48,22 +49,60 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/", (req, res) => {
+router.get("/adddre", (req, res) => {
   res.render("adddre", {
       title: "Добавить товар"
   });
 });
-router.get("/busket", (req, res) => {
-  res.render("busket", {
-      title: "Корзина"
+
+router.get("/t-shirt", (req, res) => {
+  res.render("t-shirt", {
+      title: "T-SHIRTS",
+      products: makeProducts(),
   });
 });
-// router.get("/", (req, res) => {
-//   res.render("t-thirt", {
-//       title: "Футболки"
-//   });
-// });
+
+router.get("/hoodies", (req, res) => {
+  res.render("hoodies", {
+      title: "hoodies",
+      products: makeProducts(),
+  });
+});
+
+router.get("/jacket", (req, res) => {
+  res.render("jacket", {
+      title: "jackets",
+      products: makeProducts(),
+  });
+});
+
+router.get("/shirts", (req, res) => {
+  res.render("shirts", {
+      title: "shirts",
+      products: makeProducts(),
+  });
+});
+
+router.get("/short", (req, res) => {
+  res.render("short", {
+      title: "shorts",
+      products: makeProducts(),
+  });
+});
+
+router.get("/trousers", (req, res) => {
+  res.render("trousers", {
+      title: "trousers",
+      products: makeProducts(),
+  });
+});
+
+router.get("/sweaters", (req, res) => {
+  res.render("sweaters", {
+      title: "sweaters",
+      products: makeProducts(),
+  });
+});
 
 
 module.exports = router;
-
