@@ -48,7 +48,13 @@ router.get("/", (req, res) => {
     // tableCaptions
   });
 });
+router.get("/admin", (req, res) => {
+  res.render("admin", {
+      title: "Админская странца",
+      products: makeProducts()
 
+  });
+});
 router.get("/adddre", (req, res) => {
   res.render("adddre", {
       title: "Добавить товар"
