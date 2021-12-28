@@ -10,20 +10,22 @@ block body
                 br
                 span Брэнд 
                 input(type="text" name="brand" placeholder="Брэнд")
-
+                br
+                span цена 
+                input(type="text" name="price" placeholder="цена")
                 br
                 span категория 
-                select(name="category")
+                select(name="cat")
                     option(value="SHORT") Шорты
                     option(value="T-SHIRT") Футболки
                     option(value="TROUSERS") Штаны
                     option(value="JACKET") Куртки
                     option(value="SWEATERS") Свитеры
-                    option(value="HODDIES") Свитеры
-                    option(value="TROUSERS") Свитеры
+                    option(value="HODDIES") Худи
+                    option(value="TROUSERS") Брюки
                 br
                 span Размер 
-                select(name="size")
+                select(name="s")
                     option(value="S") S
                     option(value="M") M
                     option(value="L") L
@@ -31,11 +33,14 @@ block body
                     option(value="L") XXL
                 br
                 span Цвет 
-                select(name="color")
-                    option(value="red") красный
-                    option(value="blue") синий
+                select(name="c")
+                    option(value="Red") красный
+                    option(value="Blue") синий
                     option(value="Crimsom") малиновый
-                    option(value="black") чёрный
+                    option(value="Black") чёрный
+                    option(value="Green") чёрный
+                    option(value="Orange") чёрный
+                    option(value="White") чёрный
                 br
                 span добавить изображение:  
                 input(type="file", name="добавить изображение")
