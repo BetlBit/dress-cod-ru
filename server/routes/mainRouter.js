@@ -55,6 +55,7 @@ router.get("/adddre", (req, res) => {
   });
 });
 
+
 router.get("/t-shirt", (req, res) => {
   res.render("t-shirt", {
       title: "T-SHIRTS",
@@ -62,12 +63,20 @@ router.get("/t-shirt", (req, res) => {
   });
 });
 
+// router.get("/", (req, res) => {
+//   res.render("t-thirt", {
+//       title: "Футболки"
+//   });
+// });
+
+
 router.get("/hoodies", (req, res) => {
   res.render("hoodies", {
       title: "hoodies",
       products: makeProducts(),
   });
 });
+
 
 router.get("/jacket", (req, res) => {
   res.render("jacket", {
