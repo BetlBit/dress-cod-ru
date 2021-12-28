@@ -7,5 +7,7 @@ const connectDB = function() {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
+    
 }
+console.log('pass')
 module.exports = connectDB;

@@ -1,29 +1,29 @@
-const router1 = require("express").Router();
-const mongodb = require('mongodb');
+const router = require("express").Router();
+const mongodb = require("mongodb");
 const db = require("./db.js");
-router1.post("/add", (req, res) => {
-    console.log(req.body); // Получить тело формы
-    /* *
-    * Добавить в массив новые данные => Перезаписать файл
-    * */
+
+router.post("/add", (req, res) => {
+    console.log(req.body);
     const client = db();
     client.connect(err => {
         if (err) {
-            // aaa!!!
+            console.log({'msg': 'Error connection'});
+            console.log(err);
         } else {
-            const table = client.db("dresscod");
+            const table = client.db("CoffeeShop");
             const col = table.collection("products");
             col.insertOne(req.body, err => {
                 if (err) {
                     console.log(err);
+                    client.close();
                 } else {
-                    res.send({msg: "done"});
+                    res.send({msg: 'done'});
+                    client.close();
                 }
-                client.close();
             });
         }
     });
-});
+})
 
 // router.get("/vegetables", (req, res) => {
 //     const client = db();
@@ -46,7 +46,7 @@ router1.post("/add", (req, res) => {
 //     });
 // });
 
-router1.get("/del/:id", (req, res) => {
+router.get("/del/:id", (req, res) => {
     const client = db();
     client.connect((err) => {
         if (err) {
@@ -69,4 +69,4 @@ router1.get("/del/:id", (req, res) => {
     });
 });
 
-module.exports = router1;
+module.exports = router;
