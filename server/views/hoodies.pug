@@ -1,7 +1,7 @@
 extends layout
 
 block body
-      div.box  
+     div.box
             h2= title
             .wrapper-header
                   header.header
@@ -11,8 +11,8 @@ block body
                               a.topnav-link(href='#about') &Ocy; &ncy;&acy;&scy;
                               a.topnav-link(href='#galary') &Gcy;&acy;&lcy;&iecy;&rcy;&iecy;&yacy;
                               a.topnav-link(href='') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
-                        a.header-phone(href='tel:+7 (977) 282-45-23') +7 (800) 555-555-35            
-            .sidebar.close
+                        a.header-phone(href='tel:+7 (977) 282-45-23') +7 (800) 555-555-35           
+            .sidebar.close                                          
                   ul.nav-links                                   
                         li
                               .iocn-link
@@ -31,30 +31,19 @@ block body
                                     li
                                           a(href='jacket') JACKETS
                                     li
-                                          a(href='short') SHORTS
+                                          a(href='shorts') SHORTS
                                     li
                                           a(href='sweaters') SWEATERS
                                     li
                                           a(href='shirts') SHIRTS
                                     li
                                           a(href='hoodies') HOODIES
-            div.items
-                  each pr in products 
+            div.items                                    
+                  each pr in products
                         div.item
-                              img(id="open", class='img', src='image/'+pr.image)
-                              div(class='name') #{pr.name} 
-                              div.cat #{pr.category}
-                              div.brand #{pr.brand}
-                              div.price #{pr.price} ₽     
-                              button.buy(data-id= + pr.id) Купить
-            .overlay 
-                  .modal
-                        img(class="modal-img", src="image/CTAE.jpg")
-                        div(class='modal-name') CTAE 
-                        div.modal-cat TROUSERS
-                        div.modal-brand The North Face
-                        div.modal-price 16890 ₽     
-                        button.modal-buy Купить
-                              .close(id="close") &#x2716; 
-      script(src="./openProduct.js")                       
-                   
+                              img(class='img', src='image/'+pr.image)
+                              div.name-pr #{pr.name}
+                              div.cat-pr #{pr.category}
+                              div.brand-pr #{pr.brand}
+                              div.price-pr #{pr.price} ₽     
+                              div.buy-pr(data-id= + pr.id) Купить                          

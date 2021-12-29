@@ -1,7 +1,10 @@
 extends layout
 
 block body
-      div.box  
+      div.box
+      
+            //- a(class='btn' href='../busket') корзина          
+            //- a.basket(href="../public/busket") Корзина    
             h2= title
             .wrapper-header
                   header.header
@@ -11,8 +14,11 @@ block body
                               a.topnav-link(href='#about') &Ocy; &ncy;&acy;&scy;
                               a.topnav-link(href='#galary') &Gcy;&acy;&lcy;&iecy;&rcy;&iecy;&yacy;
                               a.topnav-link(href='') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
-                        a.header-phone(href='tel:+7 (977) 282-45-23') +7 (800) 555-555-35            
+                        a.header-phone(href='tel:+7 (977) 282-45-23') +7 (800) 555-555-35
+            
             .sidebar.close
+                  
+                        
                   ul.nav-links                                   
                         li
                               .iocn-link
@@ -42,20 +48,15 @@ block body
                   each pr in products 
                         div.item
                               img(class='img', src='image/'+pr.image)
-                              div(class='name') #{pr.name} 
+                              div.name #{pr.name} 
                               div.cat #{pr.category}
                               div.brand #{pr.brand}
-                              div.price #{pr.price} ₽
-                              div.id(id="open") #{pr.id}     
-                              button.buy(data-id= + pr.id) Купить
-            .overlay 
-                  .modal
-                        img(class="modal-img", src="image/CTAE.jpg")
-                        div(class='modal-name') CTAE 
-                        div.modal-cat TROUSERS
-                        div.modal-brand The North Face
-                        div.modal-price 16890 ₽     
-                        button.modal-buy Купить
-                              .close(id="close") &#x2716; 
-      script(src="./openProduct.js")                       
-                   
+                              div.price #{pr.price} ₽     
+                              button.buy(data-id= + pr.id) Купить 
+            //- button#checkout Оформить заказ
+            //- button#clear_cart Очистить корзину
+
+
+            //- div#cart_content     
+      //- script(src="/busket.js")                   
+      //-                         a.buy Купить                         

@@ -78,7 +78,7 @@ router.get("/t-shirt", (req, res) => {
 
 router.get("/hoodies", (req, res) => {
   res.render("hoodies", {
-      title: "HOODIES",
+      title: "hoodies",
       products: makeProducts(),
   });
 });
@@ -86,35 +86,35 @@ router.get("/hoodies", (req, res) => {
 
 router.get("/jacket", (req, res) => {
   res.render("jacket", {
-      title: "JACKETS",
+      title: "jackets",
       products: makeProducts(),
   });
 });
 
 router.get("/shirts", (req, res) => {
   res.render("shirts", {
-      title: "SHIRTS",
+      title: "shirts",
       products: makeProducts(),
   });
 });
 
 router.get("/short", (req, res) => {
   res.render("short", {
-      title: "SHORTS",
+      title: "shorts",
       products: makeProducts(),
   });
 });
 
 router.get("/trousers", (req, res) => {
   res.render("trousers", {
-      title: "TROUSERS",
+      title: "trousers",
       products: makeProducts(),
   });
 });
 
 router.get("/sweaters", (req, res) => {
   res.render("sweaters", {
-      title: "SWEATERS",
+      title: "sweaters",
       products: makeProducts(),
   });
 });
