@@ -1,0 +1,51 @@
+extends layout
+
+block body
+     div.box
+            h2= title
+            .wrapper-header
+                  header.header
+                        .wrapper-logo
+                              .logo
+                        nav.topnav
+                              a.topnav-link(href='/') Вернуться на гл. страницу
+                              a.topnav-link(href='') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+                        a.header-phone(href='tel:+7 (977) 282-45-23') +7 (800) 555-555-35           
+            .sidebar.close                                          
+                  ul.nav-links                                   
+                        li
+                              .iocn-link
+                                    a(class="sidebar-logo", href="#")
+                                          i.bx.bx-collection
+                                                img(class="sidebar-logo", src="image/menu.png", alt="")
+                                          span.link_name Category
+                                    i.bx.bxs-chevron-down.arrow
+                              ul.sub-menu
+                                    li
+                                          a.link_name(href='#') Category
+                                    li
+                                           a(href='t-shirt.pug') T-SHIRTS
+                                    li
+                                          a(href='trousers.pug') TROUSERS
+                                    li
+                                          a(href='jacket.pug') JACKETS
+                                    li
+                                          a(href='shorts.pug') SHORTS
+                                    li
+                                          a(href='sweaters.pug') SWEATERS
+                                    li
+                                          a(href='shirts.pug') SHIRTS
+                                    li
+                                          a(href='hoodies.pug') HOODIES
+            div.items
+                each pr in products
+                    div.item 
+                        img(class='img', src='image/'+pr.image)
+                        div.name #{pr.name}
+                        div.name #{pr.name} 
+                        div.cat #{pr.category}
+                        div.brand #{pr.brand}
+                        div.price #{pr.price} ₽     
+                        div.cng(data-id= + pr.id) Изменить   
+                        div.del(data-id= + pr.id) Удалить   
+                    script(src="admin.js")
